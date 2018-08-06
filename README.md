@@ -27,14 +27,38 @@ Configuration steps:
 
 * Login to Ethos Integration
     * Select *Applications* from the sidebar menu
+
     ![](/images/menu.png)
 * Create parking ticket system application
-    * Click *Add Application* from the Applications screenshots
+    * Click *Add Application* from the Manage Applications screen
+
     ![](/images/add.png)
     * On the Application Setup Wizard click *Add an Application Manually*
+
     ![](/images/manual.png)
+    * Name the application *Parking Ticket System* and click *Add*
 
 * Add parking-tickets resource to owned resources
+    * On the Manage Applications screen, hover over the Parking Ticket System card and click the pencil edit icon
+
+    ![](/images/app_pts_edit.png)
+
+    * In the Owned Resources widget click the gear icon
+
+    ![](/images/resources_gear.png)
+
+    * On the Owned Resources screen enter a Base URI by clicking the pencil edit icon. This field is required but will not be used in the demo.  Enter a valid url like *http://www.google.com* and click Save.
+
+    ![](/images/baseuri.png)
+
+    * Stay on the Owned Resources screen and click *Add Resources*. On the options dialog select *Add A Custom Resource* and click Next. Enter *parking-tickets* for resource name and leave other fields blank.  Click Add.
+
+    ![](/images/create_resource.png)
+
+    * When complete, the Owned Resources screen should look like:
+
+    ![](/images/owned_resources.png)    
+
 * grab api key
 * Create finance system application
 * Subscribe to parking-tickets
