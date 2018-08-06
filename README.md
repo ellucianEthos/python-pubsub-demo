@@ -106,3 +106,32 @@ Configuration steps:
     * On the API Keys screen an API Key will have been auto-created. The API Key is a UUID in the format of xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. Copy this value and save it, the API Key will need to be placed in the code.
 
     ![](/images/apikey_fs.png)
+
+## Installing
+
+The demo is written in python 3. The only library dependency is the Requests library, documentation can be found [here.](http://docs.python-requests.org/en/master/). To install the dependency:
+
+```
+pip install requests
+```
+
+Note - The demo will work in python 2.7 however some minor syntax changes will need to be made.  For example, the *print("some string")* function in 3 needs to be re-written as *print 'some string'*.
+
+## Running the demo
+
+The demo code simulates two separate systems using Ethos Integration. **Each "system" must have a valid Ethos Integration API key.** These api keys were created in the **Configuring Ethos Integration** section of this document.
+
+In the file *parking_ticket_system.py* file replace the value for the API_KEY variable with the api key that was created in the previous steps for the Parking Ticket System. In the file *finance_system.py* file replace the value for the API_KEY variable with the api key that was created in the previous steps for the Finance System.
+
+To start the parking ticket system, open a new console and type:
+```
+python parking_ticket_system.py
+```
+In a new, separate console type:
+```
+python finance_system.py
+```
+The python programs will start using Ethos Integration to communicate with each other. If there are error messages on the screen related to "Invalid API Key", verify the correct API keys were copied to the appropriate python file.
+
+## Notes about the code
+talk about jwts and ethos class
