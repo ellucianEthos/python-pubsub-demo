@@ -109,13 +109,13 @@ Configuration steps:
 
 ## Installing
 
-The demo is written in python 3. The only library dependency is the Requests library, documentation can be found [here.](http://docs.python-requests.org/en/master/). To install the dependency:
+The demo is written in python 3. The only library dependency is the Requests library, documentation can be found [here.](http://docs.python-requests.org/en/master/) To install the dependency:
 
 ```
 pip install requests
 ```
 
-Note - The demo will work in python 2.7 however some minor syntax changes will need to be made.  For example, the *print("some string")* function in 3 needs to be re-written as *print 'some string'*.
+Note - The demo will work in python 2.7 however some minor syntax changes will need to be made.  For example, the *print("some string")* function in needs to be re-written as *print 'some string'*.
 
 ## Running the demo
 
@@ -134,4 +134,13 @@ python finance_system.py
 The python programs will start using Ethos Integration to communicate with each other. If there are error messages on the screen related to "Invalid API Key", verify the correct API keys were copied to the appropriate python file.
 
 ## Notes about the code
-talk about jwts and ethos class
+
+The parking_ticket_system.py file will generate random parking tickets and publish them to Ethos Integration as change notifications. The code will run in an infinite loop publishing change notifications waiting randomly up to 20 seconds. The finance_system.py will check for change notifications every 60 seconds and print them to the screen. When both files are running the output will look something like:
+
+![](/images/pts_console.png)
+
+![](/images/fs_console.png)
+
+The ethos.py file is a simple python class that encapsulates all the Ethos Integration specific code. There are methods to get a JWT, send a change notification and receive change notifications.
+
+The Ethos Integration APIs are secured with [JSON Web Tokens (JWT)](https://en.wikipedia.org/wiki/JSON_Web_Token). In order to obtain a JWT the code sends an API Key. This can be seen in the *get_jwt()* method. JWT's in Ethos Integration expire after 5 minutes. When an API call is made with an expired JWT the API call will fail with an HTTP code 401.  The *send_change_notification()* and *get_change_notifications()* methods will respond to a 401 by attempting to obtain a new JWT.
