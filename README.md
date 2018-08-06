@@ -21,7 +21,7 @@ The *authoritative application* is the parking ticket system which owns the *res
 
 ## Configuring Ethos Integration
 
-In order to run this demo code Ethos Integration must be configured properly. The configuration steps are not hard but can be confusing to new users of Ethos Integration. These steps must be completed for the demo to work. Acquiring access to the Ethos Integration administrative website is beyond the scope of this document. Please contact your Ellucian representative about getting access to Ethos Integration.
+In order to run the demo code Ethos Integration must be configured properly. The configuration steps are not hard but can be confusing to new users of Ethos Integration. These steps must be completed for the demo to work. Acquiring access to the Ethos Integration administrative website is beyond the scope of this document. Please contact your Ellucian representative about getting access to Ethos Integration.
 
 Configuration steps:
 
@@ -119,9 +119,9 @@ Note - The demo will work in python 2.7 however some minor syntax changes will n
 
 ## Running the demo
 
-The demo code simulates two separate systems using Ethos Integration. **Each "system" must have a valid Ethos Integration API key.** These api keys were created in the **Configuring Ethos Integration** section of this document.
+The demo code simulates two separate systems using Ethos Integration. **Each "system" must have a valid Ethos Integration API key.** These API keys were created in the **Configuring Ethos Integration** section of this document.
 
-In the file *parking_ticket_system.py* file replace the value for the API_KEY variable with the api key that was created in the previous steps for the Parking Ticket System. In the file *finance_system.py* file replace the value for the API_KEY variable with the api key that was created in the previous steps for the Finance System.
+In the file *parking_ticket_system.py* file replace the value for the API_KEY variable with the API key that was created in the previous steps for the Parking Ticket System. In the file *finance_system.py* file replace the value for the API_KEY variable with the API key that was created in the previous steps for the Finance System.
 
 To start the parking ticket system, open a new console and type:
 ```
