@@ -21,7 +21,7 @@ The *authoritative application* is the parking ticket system which owns the *res
 
 ## Configuring Ethos Integration
 
-In order to run this demo code Ethos Integration must be configured properly. The configuration steps are not hard but can be confusing to new users of Ethos Integration. Acquiring access to the Ethos Integration administrative website is beyond the scope of this document.
+In order to run this demo code Ethos Integration must be configured properly. The configuration steps are not hard but can be confusing to new users of Ethos Integration. These steps must be completed for the demo to work. Acquiring access to the Ethos Integration administrative website is beyond the scope of this document. Please contact your Ellucian representative about getting access to Ethos Integration.
 
 Configuration steps:
 
@@ -29,7 +29,7 @@ Configuration steps:
     * Select *Applications* from the sidebar menu
 
     ![](/images/menu.png)
-* Create parking ticket system application
+* Create Parking Ticket System application
     * Click *Add Application* from the Manage Applications screen
 
     ![](/images/add.png)
@@ -39,11 +39,11 @@ Configuration steps:
     * Name the application *Parking Ticket System* and click *Add*
 
 * Add parking-tickets resource to owned resources
-    * On the Manage Applications screen, hover over the Parking Ticket System card and click the pencil edit icon
+    * On the Manage Applications screen, hover over the Parking Ticket System card and click the pencil edit icon.
 
     ![](/images/app_pts_edit.png)
 
-    * In the Owned Resources widget click the gear icon
+    * In the Owned Resources widget click the gear icon.
 
     ![](/images/resources_gear.png)
 
@@ -59,9 +59,50 @@ Configuration steps:
 
     ![](/images/owned_resources.png)    
 
-* grab api key
-* Create finance system application
-* Subscribe to parking-tickets
-* grab api key
+* Get the API Key for the Parking Ticket System
+    * On the Manage Applications screen click the pencil edit icon again for the Parking Ticket System application. On the application screen for the Parking Ticket System, click *Manage API Keys*.
 
-add screenshots
+    ![](/images/manage_apikeys.png)
+
+    * On the API Keys screen an API Key will have been auto-created. The API Key is a UUID in the format of xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. Copy this value and save it, the API Key will need to be placed in the code.
+
+    ![](/images/apikey.png)
+
+* Create Finance System application
+    * Click *Add Application* from the Manage Applications screen
+
+    ![](/images/add.png)
+    * On the Application Setup Wizard click *Add an Application Manually*
+
+    ![](/images/manual.png)
+    * Name the application *Finance System* and click *Add*
+
+* Subscribe to parking-tickets
+    * On the Manage Applications screen, hover over the Finance System card and click the pencil edit icon
+
+    ![](/images/app_fs_edit.png)
+
+    * In the Subscriptions widget click the gear icon.
+
+    ![](/images/subscriptions_gear.png)
+
+    * On the Subscriptions screen click *Add Subscriptions*.
+
+    ![](/images/add_subscriptions.png)
+
+    * On the Add Subscriptions modal window find *parking-tickets* in the list and click checkbox. Click Add.  *Note - there may be other resources listed here.*
+
+    ![](/images/add_subscriptions_modal.png)
+
+    * When complete, the Subscriptions screen should look like:
+
+    ![](/images/subscriptions.png)
+
+* Get the API Key for the Finance System
+    * On the Manage Applications screen click the pencil edit icon again for the Finance System application. On the application screen for the Finance System, click *Manage API Keys*.
+
+    ![](/images/manage_apikeys.png)
+
+    * On the API Keys screen an API Key will have been auto-created. The API Key is a UUID in the format of xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. Copy this value and save it, the API Key will need to be placed in the code.
+
+    ![](/images/apikey_fs.png)
