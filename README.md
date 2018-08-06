@@ -1,5 +1,5 @@
 # python-pubsub-demo
-This demo application written in Python shows how to use the Ethos Integration publish-subscribe messaging pattern. A general overview of this pattern is described [here.](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)
+This demo application written in Python demonstrates how to use the Ethos Integration publish-subscribe messaging pattern. A general overview of this pattern is described [here.](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)
 
 ## Ethos Integration Overview
 
@@ -25,7 +25,7 @@ In order to run this demo code Ethos Integration must be configured properly. Th
 
 Configuration steps:
 
-* #### Login to Ethos Integration##
+* Login to Ethos Integration
 * Create parking ticket system application
 * Add parking-tickets resource to owned resources
 * grab api key
@@ -33,21 +33,4 @@ Configuration steps:
 * Subscribe to parking-tickets
 * grab api key
 
-
-## Ethos Integration Technical Overview
-Adheres to HTTP REST principles
-http -
-uses JWT
-
-Sub
-
-Notes about the code
-pip install requests library
-
-Important Notes
-update the api keys in the code
-
-publish change notifications
-
-applications, resources and authoritative applications
-api keys and jwts, jwts good for 5 minutes, don't need to get one every time
+add screenshots
