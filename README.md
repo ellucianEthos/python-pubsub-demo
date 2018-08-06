@@ -26,7 +26,14 @@ In order to run this demo code Ethos Integration must be configured properly. Th
 Configuration steps:
 
 * Login to Ethos Integration
+    * Select *Applications* from the sidebar menu
+    ![](/images/menu.png)
 * Create parking ticket system application
+    * Click *Add Application* from the Applications screenshots
+    ![](/images/add.png)
+    * On the Application Setup Wizard click *Add an Application Manually*
+    ![](/images/manual.png)
+
 * Add parking-tickets resource to owned resources
 * grab api key
 * Create finance system application
