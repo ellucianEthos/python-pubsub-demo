@@ -1,7 +1,6 @@
 import requests
 
 class Ethos:
-    auth_url = "https://integrate.elluciancloud.com"
     ethos_integration_url = "https://integrate.elluciancloud.com"
     api_key = ''
     jwt = ''
@@ -12,7 +11,7 @@ class Ethos:
     def get_jwt(self):
         if self.api_key:
             headers = { 'Authorization': "Bearer " + self.api_key}
-            response = requests.request("POST", self.auth_url + "/auth", headers=headers)
+            response = requests.request("POST", self.ethos_integration_url + "/auth", headers=headers)
 
             if response.status_code == 200:
                 self.jwt = response.text
@@ -27,6 +26,7 @@ class Ethos:
     def send_change_notification(self,change_notification,retry=True):
         if not self.jwt:
             self.get_jwt()
+
         headers = {
               'Authorization': "Bearer " + self.jwt,
               'Content-Type': 'application/vnd.hedtech.change-notifications.v2+json'}
