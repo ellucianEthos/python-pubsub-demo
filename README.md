@@ -17,7 +17,7 @@ Imagine a college campus where there is a parking ticket system and a finance sy
 
 The *authoritative application* is the parking ticket system which owns the *resource* parking-tickets.  The *subscribing application* is the finance system which listens for *change notifications* to the parking-tickets *resource*.
 
-![](/images/usecase.png)
+![](/images/usecase2.png)
 
 ## Configuring Ethos Integration
 
